@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Weekend.Views.MainPage"
+    xmlns:views="clr-namespace:Weekend.Views;assembly=Weekend"
+    Title="{Binding Title}">
+    <TabbedPage.Children>
+        <views:TripsPage />
+        <ContentPage Title="Tickets"><StackLayout><Label Text="TICKETS"></Label><Switch></Switch></StackLayout></ContentPage>
+        <ContentPage Title="Profile"><StackLayout><Label Text="PROFILE"></Label></StackLayout></ContentPage>
+        <ContentPage Title="Settings"><StackLayout><Label Text="SETTINGS"></Label></StackLayout></ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

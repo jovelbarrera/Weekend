@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    xmlns:converters="clr-namespace:Weekend.Converters;assembly=Weekend"
+    xmlns:controls="clr-namespace:Weekend.Controls;assembly=Weekend"
+    xmlns:i18n="clr-namespace:Weekend;assembly=Weekend"
+    x:Class="Weekend.Views.Cell.TripCell">
+    <ViewCell.View>
+        <StackLayout
+            Padding="20,10,20,10"
+            Spacing="0">
+            <StackLayout
+                Orientation="Horizontal"
+                BackgroundColor="White">
+                <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Start"
+                    Padding="-10,0,0,0">
+                    <controls:CustomImage
+                        BorderRadius="10"
+                        WidthRequest="125"
+                        HeightRequest="115"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Aspect="AspectFill"
+                        Source="{Binding Picture}" />
+                    <StackLayout
+                        HorizontalOptions="Start"
+                        Padding="-15,0,0,0">
+                        <BoxView
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="End"
+                            BackgroundColor="White"
+                            WidthRequest="20" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Padding="0,10,5,10"
+                    Spacing="0">
+                    <Label
+                        Text="{Binding Name}"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        TextColor="{StaticResource PrimaryColor}">
+                        <Label.FontFamily>
+                            <OnPlatform
+                                x:TypeArguments="x:String">
+                                <On
+                                    Platform="iOS"
+                                    Value="Lato-Bold" />
+                                <On
+                                    Platform="Android"
+                                    Value="Lato-Bold.ttf#Lato-Bold" />
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <Label
+                        Text="{Binding Tickets, StringFormat='{0} Tickets'}"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        FontAttributes="Italic"
+                        FontSize="Small"
+                        TextColor="{StaticResource SecondaryColor}">
+                        <Label.FontFamily>
+                            <OnPlatform
+                                x:TypeArguments="x:String">
+                                <On
+                                    Platform="iOS"
+                                    Value="Lato-Light" />
+                                <On
+                                    Platform="Android"
+                                    Value="Lato-Light.ttf#Lato-Light" />
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <Label
+                        Text="{Binding Date, StringFormat='{0:f}'}"
+                        LineBreakMode="TailTruncation"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        FontAttributes="Italic"
+                        FontSize="Small"
+                        TextColor="{StaticResource SecondaryColor}">
+                        <Label.FontFamily>
+                            <OnPlatform
+                                x:TypeArguments="x:String">
+                                <On
+                                    Platform="iOS"
+                                    Value="Lato-Light" />
+                                <On
+                                    Platform="Android"
+                                    Value="Lato-Light.ttf#Lato-Light" />
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                    <Label
+                        Text="{Binding Price, StringFormat='{0:$#,##0.00;($#,##0.00);Zero}'}"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        FontAttributes="Bold"
+                        FontSize="Small"
+                        TextColor="{StaticResource AccentColor}">
+                        <Label.FontFamily>
+                            <OnPlatform
+                                x:TypeArguments="x:String">
+                                <On
+                                    Platform="iOS"
+                                    Value="Lato-Bold" />
+                                <On
+                                    Platform="Android"
+                                    Value="Lato-Bold.ttf#Lato-Bold" />
+                            </OnPlatform>
+                        </Label.FontFamily>
+                    </Label>
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="End"
+                    Padding="0,0,-10,0">
+                    <controls:CustomBoxView
+                        BorderRadius="10"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="End"
+                        BackgroundColor="White"
+                        WidthRequest="20" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color
+        name="primaryDark">#EEEEEE</color>
+    <color
+        name="primary">#FFFFFF</color>
+    <color
+        name="secondary">#FFFFFF</color>
+    <color
+        name="accent">#353C4C</color>
+    <color
+        name="backButton">#353C4C</color>
+    <color
+        name="textColor">#353C4C</color>
+    <color
+        name="windowBackground">#EFF1F6</color>
+    <!--<color
+        name="primaryDark">#B95049</color>
+    <color
+        name="backButton">#FFFFFF</color>-->
+</resources>
